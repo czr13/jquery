@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="js/jquery-1.2.6.min.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+    <style type="text/css">
+        body{
+            background:url('img.jpg');
+            overflow:hidden;
+        }
+        /* div{
+            width: 200px;
+            height: 200px;
+            border:1px solid red;
+            position:absolute;
+        }
+
+        .box div{
+            width: 20px;
+            height: 30px;
+            background: red;
+            border-radius:10px 10px 0 0;左上，右上，右下，左下
+            float:left;
+           display:inline-block;行内块级元素
+        }
+        .box .left{
+            transform:rotate(-45deg);
+        }
+        .box .right{
+         transform:translate(8px, -32px) rotate(45deg);
+         transform:rotate(45deg);
+         position:absolute;
+         top:0px;
+         left: 8px;
+         margin-left:12px;
+         margin-top:-32px;
+
+
+        } */
+        /* 思路：
+                1，旋转
+                2，在一行
+                3，在一起
+                4，元素转换 inline-block
+                5，外边距
+                6，
+        方法:
+          1,css3属性
+          2，定位
+          3,浮动
+          4,直接用外边距
+          5,元素转换 inline-block
+          6,伪类
+        */
+       .snowfall-flakes:after,.snowfall-flakes:before{
+        content:"";
+        width: 20px;
+        height: 30px;
+        background: red;
+        border-radius:10px 10px 0 0;
+        position: absolute;
+        transform:rotate(-45deg);
+
+       }
+       .snowfall-flakes:before{
+        content:"";
+        transform:rotate(45deg);
+        left:7px;
+
+       }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- <div class="left"></div>
+        <div class="right"></div> -->
+    </div>
+    <script src="js/jquery-1.2.6.min.js" type="text/javascript"></script>
+<script src="js/snowfall.jquery.js"></script>
+<script>
+      //调用飘落函数 实现飘落效果
+      $(document).snowfall({
+          flakeCount: 50 //爱心的个数
+      });
+  </script>
+</body>
+
+</html>

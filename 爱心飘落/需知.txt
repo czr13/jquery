@@ -1,0 +1,2 @@
+css3的一些基本属性：transform,border-radius
+了解插件：snowfall.jquery
