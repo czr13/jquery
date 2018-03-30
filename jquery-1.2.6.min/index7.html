@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="js/jquery-1.2.6.min.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+    <style type="text/css">
+        .snowfall-flakes:after{
+            content:"";
+            width: 20px;
+            height: 30px;
+            background: red;
+            border-radius:10px 10px 0 0;
+            position:absolute;
+            transform:rotate(-45deg);
+        }
+         .snowfall-flakes:before{
+            content:"";
+            width: 20px;
+            height: 30px;
+            background:red;
+            border-radius:10px 10px 0 0;
+            position:absolute;
+            transform:rotate(45deg);
+            left:16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+        $(document).snowfall({
+            flakeCount:50,
+        })
+    </script>
+</body>
+</html>
